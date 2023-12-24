@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <smith.app.calculator.views.CalculatorOutputView
+        android:id="@+id/outputView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/trash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/outputView"
+        app:layout_constraintEnd_toStartOf="@id/delete"
+        app:layout_constraintBottom_toTopOf="@id/num7"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/delete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/delete"
+        app:layout_constraintStart_toEndOf="@id/clear"
+        app:layout_constraintTop_toBottomOf="@id/outputView"
+        app:layout_constraintEnd_toStartOf="@id/percent"
+        app:layout_constraintBottom_toTopOf="@id/num8"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/percent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/percent"
+        app:layout_constraintStart_toEndOf="@id/delete"
+        app:layout_constraintTop_toBottomOf="@id/outputView"
+        app:layout_constraintEnd_toStartOf="@id/divide"
+        app:layout_constraintBottom_toTopOf="@id/num9"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/divide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/divide"
+        app:layout_constraintStart_toEndOf="@id/percent"
+        app:layout_constraintTop_toBottomOf="@id/outputView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/multiply"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clear"
+        app:layout_constraintEnd_toStartOf="@id/num8"
+        app:layout_constraintBottom_toTopOf="@id/num4"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="8"
+        app:layout_constraintStart_toEndOf="@id/num7"
+        app:layout_constraintTop_toBottomOf="@id/delete"
+        app:layout_constraintEnd_toStartOf="@id/num9"
+        app:layout_constraintBottom_toTopOf="@id/num5"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="9"
+        app:layout_constraintStart_toEndOf="@id/num8"
+        app:layout_constraintTop_toBottomOf="@id/percent"
+        app:layout_constraintEnd_toStartOf="@id/multiply"
+        app:layout_constraintBottom_toTopOf="@id/num6"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/multiply"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/multiply"
+        app:layout_constraintStart_toEndOf="@id/num9"
+        app:layout_constraintTop_toBottomOf="@id/divide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/minus"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num7"
+        app:layout_constraintEnd_toStartOf="@id/num5"
+        app:layout_constraintBottom_toTopOf="@id/num1"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="5"
+        app:layout_constraintStart_toEndOf="@id/num4"
+        app:layout_constraintTop_toBottomOf="@id/num8"
+        app:layout_constraintEnd_toStartOf="@id/num6"
+        app:layout_constraintBottom_toTopOf="@id/num2"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="6"
+        app:layout_constraintStart_toEndOf="@id/num5"
+        app:layout_constraintTop_toBottomOf="@id/num9"
+        app:layout_constraintEnd_toStartOf="@id/minus"
+        app:layout_constraintBottom_toTopOf="@id/num3"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/minus"
+        app:layout_constraintStart_toEndOf="@id/num6"
+        app:layout_constraintTop_toBottomOf="@id/multiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/plus"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num4"
+        app:layout_constraintEnd_toStartOf="@id/num2"
+        app:layout_constraintBottom_toTopOf="@id/num00"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="2"
+        app:layout_constraintStart_toEndOf="@id/num1"
+        app:layout_constraintTop_toBottomOf="@id/num5"
+        app:layout_constraintEnd_toStartOf="@id/num3"
+        app:layout_constraintBottom_toTopOf="@id/num0"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="3"
+        app:layout_constraintStart_toEndOf="@id/num2"
+        app:layout_constraintTop_toBottomOf="@id/num6"
+        app:layout_constraintEnd_toStartOf="@id/plus"
+        app:layout_constraintBottom_toTopOf="@id/point"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/plus"
+        app:layout_constraintStart_toEndOf="@id/num3"
+        app:layout_constraintTop_toBottomOf="@id/minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/equal"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num00"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num1"
+        app:layout_constraintEnd_toStartOf="@id/num0"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/num0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="0"
+        app:layout_constraintStart_toEndOf="@id/num00"
+        app:layout_constraintTop_toBottomOf="@id/num2"
+        app:layout_constraintEnd_toStartOf="@id/point"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemText="."
+        app:layout_constraintStart_toEndOf="@id/num0"
+        app:layout_constraintTop_toBottomOf="@id/num3"
+        app:layout_constraintEnd_toStartOf="@id/equal"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <smith.app.calculator.views.CalculatorInputView
+        android:id="@+id/equal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:itemIcon="@drawable/equal"
+        app:layout_constraintStart_toEndOf="@id/point"
+        app:layout_constraintTop_toBottomOf="@id/plus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

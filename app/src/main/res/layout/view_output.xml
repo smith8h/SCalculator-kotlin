@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    tools:parentTag="android.widget.LinearLayout"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="@color/surface" >
+
+    <TextView
+        android:id="@+id/equation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:maxLines="3"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp"
+        android:textColor="@color/onSurface"
+        android:textSize="38sp"
+        tools:text="10*90" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        tools:text="900"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="24dp"
+        android:textSize="26sp"
+        android:maxLines="1"
+        android:gravity="end"
+        android:alpha=".7"
+        android:textColor="@color/primary" />
+
+</merge>

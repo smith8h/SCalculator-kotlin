@@ -1,0 +1,76 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'smith.app.calculator'
+
+    compileSdk 33
+    buildToolsVersion '33.0.2'
+
+    defaultConfig {
+        applicationId "smith.app.calculator"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0-Uno"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('D://Android Projects/ObfuscationDictionary/Hussein-Smith.jks')
+            storePassword '@smith07729416758'
+            keyAlias 'Hussein Smith'
+            keyPassword '@smith07729416758'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    lintOptions {
+        baseline file("lint-errors.xml")
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation('org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0')
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // testing
+    testImplementation('junit:junit:4.12')
+    testImplementation('org.mockito:mockito-core:2.18.3')
+    implementation('org.beanshell:bsh:2.0b4')
+}

@@ -1,0 +1,37 @@
+<resources>
+
+    <color name="hnt">@color/outline</color>
+
+    <color name="seed">#6A87E3</color>
+    <color name="primary">#B5C4FF</color>
+    <color name="onPrimary">#00297A</color>
+    <color name="primaryContainer">#1E4099</color>
+    <color name="onPrimaryContainer">#DBE1FF</color>
+    <color name="secondary">#C1C5DD</color>
+    <color name="onSecondary">#2B3042</color>
+    <color name="secondaryContainer">#414659</color>
+    <color name="onSecondaryContainer">#DDE1F9</color>
+    <color name="tertiary">#E2BBDB</color>
+    <color name="onTertiary">#422740</color>
+    <color name="tertiaryContainer">#5B3D57</color>
+    <color name="onTertiaryContainer">#FFD6F7</color>
+    <color name="error">#FFB4AB</color>
+    <color name="errorContainer">#93000A</color>
+    <color name="onError">#690005</color>
+    <color name="onErrorContainer">#FFDAD6</color>
+    <color name="background">#1B1B1F</color>
+    <color name="onBackground">#E4E2E6</color>
+    <color name="surface">#1B1B1F</color>
+    <color name="onSurface">#E4E2E6</color>
+    <color name="surfaceVariant">#45464F</color>
+    <color name="onSurfaceVariant">#C6C6D0</color>
+    <color name="outline">#8F909A</color>
+    <color name="inverseOnSurface">#1B1B1F</color>
+    <color name="inverseSurface">#E4E2E6</color>
+    <color name="inversePrimary">#3A59B2</color>
+    <color name="shadow">#000000</color>
+    <color name="surfaceTint">#B5C4FF</color>
+    <color name="outlineVariant">#45464F</color>
+    <color name="scrim">#000000</color>
+
+</resources>
